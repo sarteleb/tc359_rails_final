@@ -1,0 +1,5 @@
+<!-- app/views/static/cats.html.erb -->
+
+<% @cats.each do |cat| %>
+  <img src="<%= cat.url %>" alt="Cat pic">
+<% end %>
