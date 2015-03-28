@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @animal_license.name %>
+</p>
+
+<p>
+  <strong>Number of pets:</strong>
+  <%= @animal_license.number_of_pets %>
+</p>
+
+<p>
+  <strong>All licensed:</strong>
+  <%= @animal_license.all_licensed %>
+</p>
+
+<%= link_to 'Edit', edit_animal_license_path(@animal_license) %> |
+<%= link_to 'Back', animal_licenses_path %>
