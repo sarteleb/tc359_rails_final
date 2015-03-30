@@ -17,13 +17,17 @@
         <td><%= animal_license.number_of_pets %></td>
         <td><%= animal_license.all_licensed %></td>
         <td><%= link_to 'Show', animal_license %></td>
-        <td><%= link_to 'Edit', edit_animal_license_path(animal_license) %></td>
-        <td><%= link_to 'Destroy', animal_license, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if user_signed_in? %>
+          <td><%= link_to 'Edit', edit_animal_license_path(animal_license) %></td>
+          <td><%= link_to 'Destroy', animal_license, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Animal license', new_animal_license_path %>
+<% if user_signed_in? %>
+  <%= link_to 'New Animal license', new_animal_license_path %>
+<% end %>

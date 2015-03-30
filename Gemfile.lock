@@ -28,17 +28,27 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
+    bcrypt (3.1.10-x86-mingw32)
+    better_errors (2.1.1)
+      coderay (>= 1.0.0)
+      erubis (>= 2.6.6)
+      rack (>= 0.9.0)
+    binding_of_caller (0.7.2)
+      debug_inspector (>= 0.0.1)
     builder (3.2.2)
+    callsite (0.0.11)
     cat_api (0.1.0)
       nokogiri (~> 1.6.5)
       rest-client (~> 1.7.2)
+    coderay (1.1.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
     coffee-script (2.3.0)
       coffee-script-source
       execjs
-    coffee-script-source (1.9.1)
+    coffee-script-source (1.8.0)
+    debug_inspector (0.0.2)
     erubis (2.7.0)
     execjs (2.4.0)
     ffi (1.9.8-x86-mingw32)
@@ -53,6 +63,10 @@ GEM
     json (1.8.2)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
+    meta_request (0.3.4)
+      callsite (~> 0.0, >= 0.0.11)
+      rack-contrib (~> 1.1)
+      railties (>= 3.0.0, < 5.0.0)
     mime-types (2.4.3)
     mini_portile (0.6.2)
     minitest (5.5.1)
@@ -62,6 +76,8 @@ GEM
       mini_portile (~> 0.6.0)
     pg (0.18.1-x86-mingw32)
     rack (1.5.2)
+    rack-contrib (1.2.0)
+      rack (>= 0.9.1)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.1.8)
@@ -127,10 +143,15 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  bcrypt (~> 3.1.7)
+  better_errors
+  binding_of_caller
   cat_api (~> 0.1.0)
   coffee-rails (~> 4.0.0)
+  coffee-script-source (= 1.8.0)
   jbuilder (~> 2.0)
   jquery-rails
+  meta_request
   pg
   rails (= 4.1.8)
   rails_12factor

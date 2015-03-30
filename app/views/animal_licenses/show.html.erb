@@ -14,6 +14,7 @@
   <strong>All licensed:</strong>
   <%= @animal_license.all_licensed %>
 </p>
-
-<%= link_to 'Edit', edit_animal_license_path(@animal_license) %> |
-<%= link_to 'Back', animal_licenses_path %>
+<% if user_signed_in? %>
+  <%= link_to 'Edit', edit_animal_license_path(@animal_license) %> |
+  <%= link_to 'Back', animal_licenses_path %>
+<% end %>
